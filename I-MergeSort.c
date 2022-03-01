@@ -64,7 +64,7 @@ int main()
     printf("Enter elements: ");
     for(i=0;i<n;i++) scanf("%d",&arr[i]);
 
-    MergeSort(arr,0,n);
+    MergeSort(arr,0,n-1);
 
     printf("After sorting :");
     for(i=0;i<n;i++) printf("%d ",arr[i]);
