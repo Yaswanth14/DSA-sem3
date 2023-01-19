@@ -37,16 +37,22 @@ int isEmpty()
 
 void BFS(int v)
 {
-    enque(v);
+    printf("%d -> ",v);
     visited[v] = 1;
-    printf("%d -> ",deque());
+    enque(v); // to explore 
+    
+    while(!isEmpty()){
+        
+    int val = deque();
     for(int i=0;i<4;i++)
     {
-        if(AdjMat[v][i]==1&&!visited[i]) enque(i);
+        if(AdjMat[v][i]==1&&!visited[i])
+        {
+            printf("%d -> ", i);
+            visited[i] = 1;
+            enque(i);
+        }
     }
-
-    for(int i=0;i<4;i++){
-        if(!visited[i]) BFS(i);
     }
 }
 
@@ -69,4 +75,3 @@ int main()
 
     return 0;
 }
-
